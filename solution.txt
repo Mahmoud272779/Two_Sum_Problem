@@ -1,0 +1,30 @@
+public class Solution
+{
+	public  int[] TwoSum(int[] nums, int target)
+	{
+		Dictionary<int,int> valueIndex= new Dictionary<int, int>();
+		for (int i = 0; i < nums.Length; i++)
+		{
+
+			if (valueIndex.ContainsKey(target - nums[i]))
+
+
+				return new int[] { i, valueIndex[target - nums[i]] };
+
+			if (!valueIndex.ContainsKey(nums[i])) // not to store duplicate keys in the dictionary
+				valueIndex.Add(nums[i], i);
+					
+		    
+
+
+		}
+
+		return new int[0];
+	}
+}
+
+ex: [3,2,4] ,6
+
+1--> 3,0
+2-->2,1
+3-->
